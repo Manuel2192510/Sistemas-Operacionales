@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "*/5 * * * * /ruta/al/script7.sh" | crontab -
+
+echo "* * * * * /ruta/al/script8.sh" | crontab -
