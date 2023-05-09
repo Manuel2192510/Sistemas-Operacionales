@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Comprobar que se han pasado dos argumentos
+if [ $# -ne 2 ]; then
+    echo "Uso: $0 <archivo1> <archivo2>"
+    exit 1
+fi
+
+# Asignar los argumentos a variables
+archivo1=$1
+archivo2=$2
+
+# Mostrar el tipo de archivo de los dos archivos
+file "$archivo1"
+file "$archivo2"
+
+# Comparar los archivos a nivel de bytes
+diff -q "$archivo1" "$archivo2"
+
+# Comparar los archivos a nivel de líneas
+diff -y --suppress-common-lines "$archivo1" "$archivo2"
+
+# Mostrar las diferencias entre los dos archivos
+diff "$archivo1" "$archivo2"
