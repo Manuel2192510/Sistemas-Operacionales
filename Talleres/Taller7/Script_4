@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Obtener el nombre del sistema operativo
+os=$(uname -s)
+
+# Obtener la arquitectura de la máquina
+arch=$(uname -m)
+
+# Obtener la versión del kernel
+kernel=$(uname -r)
+
+# Mostrar la información obtenida
+echo "Sistema Operativo: $os"
+echo "Arquitectura: $arch"
+echo "Versión del kernel: $kernel"
