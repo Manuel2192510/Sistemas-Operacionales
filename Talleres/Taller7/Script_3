@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Comprobar que se ha pasado un argumento
+if [ $# -ne 2 ]; then
+    echo "Uso: $0 <nombre del alias> <comando>"
+    exit 1
+fi
+
+# Asignar los argumentos a variables
+alias_name=$1
+command=$2
+
+# Agregar el alias al archivo .bashrc
+echo "alias $alias_name='$command'" >> ~/.bashrc
+
+# Cargar el archivo .bashrc
+source ~/.bashrc
+
+# Mostrar el nuevo alias
+echo "Se ha agregado el alias '$alias_name' para el comando '$command'"
