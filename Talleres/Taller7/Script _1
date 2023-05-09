@@ -1,1 +1,10 @@
+#!/bin/bash
+
+history=$(history)
+
+commands=$(echo "${history}" | awk '{$1="";print substr($0,2)}')
+
+unique_commands=$(echo "${commands}" | tr ' ' '\n' | sort | uniq -c | sort -rn)
+
+echo "${unique_commands}"
 
