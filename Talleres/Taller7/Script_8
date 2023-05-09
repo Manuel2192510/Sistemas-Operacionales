@@ -1,0 +1,11 @@
+log_file="/ruta/al/archivo.log"
+
+max_size=1000000 # 1 MB
+
+size=$(stat -c%s "$log_file")
+if [[ $size -gt $max_size ]]; then
+ 
+  gzip "$log_file"
+
+  > "$log_file"
+fi
