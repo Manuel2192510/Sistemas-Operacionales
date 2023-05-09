@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Comprobar que se han pasado los tres argumentos
+if [ $# -ne 3 ]; then
+    echo "Uso: $0 <permisos> <usuario> <grupo>"
+    exit 1
+fi
+
+# Asignar los argumentos a variables
+permisos=$1
+usuario=$2
+grupo=$3
+archivo=<nombre del archivo>
+
+# Modificar los permisos, usuario y grupo del archivo
+chmod $permisos $archivo
+chown $usuario:$grupo $archivo
+
+# Mostrar los nuevos permisos, usuario y grupo del archivo
+ls -l $archivo
