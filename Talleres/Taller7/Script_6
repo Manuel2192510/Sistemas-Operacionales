@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Buscar todos los archivos .txt, .png y .jpg en el sistema
+find / -type f \( -name "*.txt" -o -name "*.png" -o -name "*.jpg" \) 2>/dev/null
+
+7. Escriba un script que genere una archivo .log. Cada que el script se ejecute debe registrar en una linea la fecha, hora, minutos, segundos, el hostname, la carga del sistema y la memoria libre
+
+#!/bin/bash
+
+# Obtener la fecha, hora, hostname, carga del sistema y memoria libre
+fecha=$(date +"%Y-%m-%d")
+hora=$(date +"%H:%M:%S")
+hostname=$(hostname)
+carga_sistema=$(uptime | awk '{print $10 $11 $12}')
+memoria_libre=$(free | awk '/Mem/{printf("%.2f%%\n"), $4/$2 * 100.0}')
+
+# Crear una línea de registro con la información obtenida
+registro="$fecha $hora $hostname carga:$carga_sistema memoria libre:$memoria_libre"
+
+# Escribir la línea de registro en el archivo de log
+echo "$registro" >> log.txt
