@@ -1,7 +1,7 @@
 ---
 title: "Taller_11"
 author: "Manuel De Angel 2192510"
-date: "2023-05-26"
+date: "2023-06-2"
 output: html_document
 ---
 **1. Explique la diferencia entre los conceptos de fragmentación interna y externa**
