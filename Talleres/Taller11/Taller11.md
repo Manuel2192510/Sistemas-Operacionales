@@ -158,8 +158,8 @@ En resumen, la cantidad de memoria requerida por las estructuras de producción 
 3. 2. 500
 4. 3. 400
 5. 4. 112
-En términos de la cantidad de memoria requerida por las estructuras de producción de direcciones, la paginación y la segmentación difieren en su enfoque y los recursos necesarios:
 
+En términos de la cantidad de memoria requerida por las estructuras de producción de direcciones, la paginación y la segmentación difieren en su enfoque y los recursos necesarios:
 1. Mecanismo de paginación:
 - La paginación divide la memoria física y virtual en páginas de tamaño fijo. El sistema operativo mantiene una tabla de páginas (Page Table) que mapea las direcciones virtuales a las direcciones físicas correspondientes.
 - La tabla de páginas es una estructura de datos esencial en la paginación. Su tamaño está determinado por la cantidad total de páginas virtuales en el espacio de direcciones del proceso.
