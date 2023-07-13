@@ -1,3 +1,4 @@
+Manuel De Angel 2192510
 1. Recurso
 Stress-ng: Stress-ng es un recurso de prueba de tensión diseñado para someter los sistemas informáticos a pruebas exhaustivas y evaluar su estabilidad y capacidad de respuesta bajo cargas intensas. Permite simular cargas de trabajo exigentes en la unidad central de procesamiento, la memoria, el disco, la red y otros componentes, lo que facilita la detección de posibles problemas de rendimiento, fallas o vulnerabilidades tanto en el hardware como en el software.
 
